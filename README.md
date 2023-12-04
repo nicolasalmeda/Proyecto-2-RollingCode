@@ -7,9 +7,10 @@ administrador trabajar agregar, editar y borrar juegos, mientras que los usuario
 las publicaciones. Además hay requerimientos optativos como el registro de usuarios y poder armar una
 lista de productos deseados por un usuario.
 ## Requerimientos  
-###ESTRUCTURA GENERAL DEL SITIO:
+### ESTRUCTURA GENERAL DEL SITIO:
 El diseño del sitio será decidido por cada grupo, pero deberá ser completamente
 responsive. Consideramos que al menos deben desarrollar la siguientes páginas:
+<br>
 ● Página Principal: Esta página mostrará el catálogo de juegos previamente cargados desde la página
 de administración. Además debe contener un filtro que nos permita buscar un jeugo por su
 nombre.
@@ -17,6 +18,7 @@ nombre.
 juegos cargados, además de las opciones necesarias para agregar, leer, borrar y editar los
 mismos. (solo los usuarios administradores deben poder ver esta página)
 ● Página de detalle: al seleccionar un juego, veremos una página con más detalles del mismo.
+<br>
 El jeugo debe tener como mínimo las siguientes propiedades:
 ○ Código único.
 ○ Nombre
@@ -39,6 +41,7 @@ ingresar sesión. (Este mismo login servirá para usuarios registrados en caso d
 requerimiento optativo)
 REQUERIMIENTOS OPTATIVOS
 Agregar las siguientes páginas o funcionalidades a nuestro sitio:
+<br>
 
 REGISTRO
 Página de registro o ventana modal, donde se solicitarán por lo menos los siguientes campos: Nombre,
@@ -48,6 +51,7 @@ una tabla donde se pueda ver los usuarios registrados en el sitio y un botón pa
 Nota: Tener en cuenta que este sitio contará con dos perfiles de usuario, un usuario será el administrador
 y ya puede estar cargado en el sistema, el resto de los usuarios registrados usando la página o formulario
 de registro serán considerados usuarios invitados o con rol normal (No administradores).
+<br>
 
 AGREGAR RESEÑA DE JUEGO
 Una vez que nos logueamos en la web como un usuario invitado, podemos seleccionar un producto y
@@ -69,10 +73,10 @@ objetos, clases etc.
 ● Uso de Github para trabajar en forma colaborativa con el grupo.
 ● Subir el sitio a un servidor ej: netlify o githubPages
 
-##Página guía: 
+## Página guía: 
 ubisoftconnect.com
 
-##Miembros 
+## Miembros 
 Ignacio Gabriel	Sanchez
 Mariano	Arias
 Nicolás Ariel	Lagoria Almeda
