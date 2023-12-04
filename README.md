@@ -77,9 +77,11 @@ objetos, clases etc.
 ubisoftconnect.com
 
 ## Miembros 
-Ignacio Gabriel	Sanchez
-Mariano	Arias
-Nicolás Ariel	Lagoria Almeda
-Solana Rosales	Malagoli
-Tiago Bautista	Diaz
-Valentino	Villalba
+<ul>
+  <li>Ignacio Gabriel	Sanchez</li>
+  <li>Mariano	Arias</li>
+  <li>Nicolás Ariel	Lagoria Almeda</li>
+  <li>Solana Rosales	Malagoli</li>
+  <li>Tiago Bautista	Diaz</li>
+  <li>Valentino	Villalba</li>
+</ul>
