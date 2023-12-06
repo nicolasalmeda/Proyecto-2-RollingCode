@@ -94,8 +94,10 @@ const log = () => {
         if (!validUser) {
             alert('Usuario y/o contraseña incorrectos');
             closeSessionNone.style.display = 'inline-block';
-            modalNoneSession.style.display = 'inline-block';
-            accountNone.style.display = 'none'
+            modalNoneSession.style.display = 'none';
+            registrarse.style.display = "inline-block"
+            accountNone.style.display = 'inline-block'
+            modalNoneSession.style.display = 'none'
         } else {
             alert(`Bienvenido ${validUser._correo}`);
             localStorage.setItem('logginUser', JSON.stringify(validUser));

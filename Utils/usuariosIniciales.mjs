@@ -3,7 +3,17 @@ import { generarSal, hashearContrasena } from './hash.mjs';
 
 const cargaUsuarios = (user) => {
   const usuariosAlmacenados = JSON.parse(localStorage.getItem('usuarios')) || [];
-  if (usuariosAlmacenados.length > 0) {
+
+  if(user){
+    const salUsuario = generarSal()
+    const usuario = new Usuario(uuid4(), user._correo, hashearContrasena(user._contrasena, salUsuario),false,[], salUsuario)
+    usuariosAlmacenados.push(usuario)
+    localStorage.setItem('usuarios',JSON.stringify(usuariosAlmacenados))
+    return alert('Usuario cargado existosamente')
+  }
+
+ 
+  if (usuariosAlmacenados.length > 1) {
     console.log('Usuarios ya cargados:', usuariosAlmacenados);
     return;
   }else{
@@ -16,12 +26,7 @@ const cargaUsuarios = (user) => {
     console.log('Usuarios cargados:', usuarios);
   }
 
-if(user){
-  const salUsuario = generarSal()
-  const usuario = new Usuario(uuid4(), user.correo, hashearContrasena(user.contrasena, salUsuario),false, salUsuario)
-  usuariosAlmacenados.push(usuario)
-  localStorage.setItem('usuarios',JSON.stringify(usuariosAlmacenados))
-}
+
 
 }
 
