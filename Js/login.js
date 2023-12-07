@@ -1,5 +1,6 @@
 import cargaUsuarios from "../Utils/usuariosIniciales.mjs";
 import { verificarContrasena } from "../Utils/hash.mjs";
+import almacenarJuegosEnLocalStorage from "../Utils/juegosIniciales.mjs";
 
 const btnLogin = document.querySelector('#loginButton')
 const btnShowPassword = document.querySelector('#basic-addon1')
@@ -156,7 +157,7 @@ btnShowPassword.addEventListener('click', showPass2);
 modalNoneSession.addEventListener('click', cerrarSesion)
 closeSessionNone.addEventListener('click',cerrarSesion)
 
-document.addEventListener('DOMContentLoaded', function () {
-    cargaUsuarios()
+
+cargaUsuarios()
+almacenarJuegosEnLocalStorage()
     
-});

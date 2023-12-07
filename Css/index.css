@@ -48,7 +48,15 @@
   --bs-btn-active-border-color:var(--color-5-fuerte-2);
 }
 
+body{
+  background-color: #15141c;
+  /* min-height: 100vh; */
+}
 
+main{
+  padding: 50px;  
+  /* flex-grow: 1; */
+  }
 
 
 /*-------------------NavBar-------------------*/
@@ -139,10 +147,7 @@ box-shadow: -1px 13px 23px -5px rgba(79, 93, 170, 1);
   }
 }
 
-body{
-  background-color: #15141c;
-  min-height: 100vh;
-}
+
 
 
 
@@ -162,11 +167,7 @@ body{
 
 /*------------Seccion 1 ------------*/
 
-main{
-padding: 50px;  
-flex-grow: 1;
 
-}
 
 .padding {
   padding: 150px;
@@ -260,7 +261,7 @@ color: #68A5A6;
     }
       
   .card-body {
-      height: 300px;
+      height: 200px;
     }
 
 }
@@ -298,7 +299,7 @@ color: #68A5A6;
      font-size: 20px;
   }
   .card-body {
-    height: 700px;
+    height: 150px;
   }
   #carousel-inner img {
     width: 100%;
@@ -428,6 +429,20 @@ color: #68A5A6;
 .carouselGamePadding{
   padding-top: 5px;
 }
+}
+
+.JuegosGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 230px);
+  gap: 50px;
+  padding: 35px;
+  justify-content: center;
+}
+
+@media (max-width: 560px) {
+  .JuegosGrid {
+    grid-template-columns: 100%;
+  }
 }
 
 /*------------FOOTER------------*/
