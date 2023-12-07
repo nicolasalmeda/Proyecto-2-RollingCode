@@ -12,7 +12,6 @@ const cargaUsuarios = (user) => {
     return alert('Usuario cargado existosamente')
   }
 
- 
   if (usuariosAlmacenados.length > 1) {
     console.log('Usuarios ya cargados:', usuariosAlmacenados);
     return;
