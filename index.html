@@ -7,6 +7,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./Css/register.css">
+  <link rel="stylesheet" href="./Css/style.css">
   <link rel="stylesheet" href="./Css/index.css">
   <title>Document</title>
 </head>
@@ -14,13 +16,13 @@
 <body>
   <header>
     <nav class="navbar fixed-top mb-5" id="navbar">
-      <div class="container-fluid">
-        <div class="d-none d-md-block d-flex" alt="NavBar">
-          <div class="d-flex flex-row mb-3" id="admin">
+      <div class="container-fluid d-flex">
+        <div class="d-none d-lg-block d-flex" alt="NavBar">
+          <div class="d-flex flex-row mb-3">
 
             <div class="p-2">
-              <a class="navbar-brand" href="#">
-                <span>Pagina Principal</span>
+              <a class="navbar-brand text-light " href="#">
+                <span class="text-light">RollingSoft</span>
               </a>
             </div>
 
@@ -42,56 +44,15 @@
               </button>
             </div>
 
-            <div class="dropdown pTop ">
-              <button class="btn " type="button" data-bs-toggle="dropdown">
-                <a class="navbar-brand" href="./Pages/error404.html">
-                  <span>Categorias</span>
-                </a>
-              </button>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="./Pages/error404.html">
-                    <span>Shooters</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./Pages/error404.html">
-                    <span>Terror</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./Pages/error404.html">
-                    <span>Deportes</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./Pages/error404.html">
-                    <span>Carreras</span>
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./Pages/error404.html">
-                    <span>Casuales</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="p-2">
-              <a class="navbar-brand" href="./index.html#allGames">
-                <span>Juegos</span>
-              </a>
-            </div>
-
-            <div class="p-2">
-              <a class="navbar-brand" href="./Pages/Contacto.html">
-                <span>Contacto</span>
-              </a>
-            </div>
-
             <div class="p-2">
               <a class="navbar-brand" href="./Pages/About.html">
                 <span>Sobre Nosotros</span>
+              </a>
+            </div>
+
+            <div class="p-2" id="juegosDeseados">
+              <a class="navbar-brand" href="./Js/juegosDesados.js">
+                <span>Lista Juegos Deseados</span>
               </a>
             </div>
 
@@ -103,6 +64,9 @@
                 </a>
               </button>
             </div>
+
+
+
             <div class="p-2" id="closeSessionNoneJS">
               <a class="navbar-brand" href="./index.html">
                 <span>Cerrar Sesión</span>
@@ -112,7 +76,16 @@
           </div>
         </div>
 
-        <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="offcanvas"
+        <div class="input-group p-2 search__bar d-lg-flex justify-content-center align-items-center d-none">
+          <span class="input-group-text inputLogin2" id="basic-addon1">
+            <i class=" bi bi-search" id="searchbtn"></i>
+            <i class="bi bi-x-square" id="cancelsearchbtn"></i>
+          </span>
+          <input type="search" class="form-control inputLogin " placeholder="Ingrese nombre del juego..."
+            aria-label="Username" aria-describedby="basic-addon1" id="searchbar">
+        </div>
+
+        <button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -147,59 +120,27 @@
                   </a>
                 </li>
                 <li class="nav-item border-top">
-                  <a class="nav-link" href="./index.html#allGames">
-                    <i class="bi bi-controller"></i>
-                    <span>Juegos</span>
-                  </a>
-                </li>
-                <li class="nav-item border-top">
-                  <a class="nav-link" href="./Pages/Contacto.html">
-                    <i class="bi bi-telephone"></i>
-                    <span>Contacto</span>
-                  </a>
-                </li>
-                <li class="nav-item border-top">
                   <a class="nav-link" href="./Pages/About.html">
                     <i class="bi bi-file-person"></i>
                     <span>Sobre Nosotros</span>
                   </a>
                 </li>
-                <li class="nav-item border-top dropdown">
-                  <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-border-width"></i>
-                    <span>Categorias</span>
-
+                <li class="nav-item border-top" id="jeugosDeseadosModal">
+                  <a class="nav-link" href="./Pages/juegosDeseados.html">
+                    <i class="bi bi-card-list"></i>
+                    <span>Lista Juegos Deseados</span>
                   </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="./Pages/error404.html">
-                        <span>Shooters</span>
-                      </a>
-                      <a class="dropdown-item" href="./Pages/error404.html">
+                </li>
 
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="./Pages/error404.html">
-                        <span>Terror</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="./Pages/error404.html">
-                        <span>Deportes</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="./Pages/error404.html">
-                        <span>Carreras</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="./Pages/error404.html">
-                        <span>Casuales</span>
-                      </a>
-                    </li>
-                  </ul>
+                <li class="nav-item border-top ">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text inputLogin2 mt-2" id="basic-addon1">
+                      <i class=" bi bi-search" id="searchbtn2"></i>
+                      <i class="bi bi-x-square" id="cancelsearchbtn2"></i>
+                    </span>
+                    <input type="search" class="form-control inputLogin mt-2" placeholder="Ingrese nombre del juego..."
+                      aria-label="Username" aria-describedby="basic-addon1" id="searchbar2">
+                  </div>
                 </li>
               </ul>
             </div>
@@ -219,8 +160,8 @@
                 <div>
                   <div class=" m-2">
                     <i class="bi bi-globe2"></i>
-                    <button type="button" class="btn link-dark text-decoration-none" data-bs-toggle="modal"
-                      data-bs-target="#exampleModal">
+                    <button id="btnRegisterModal" type="button" class="btn link-dark text-decoration-none"
+                      data-bs-toggle="modal" data-bs-target="#goLogin">
                       <span>Registrarse</span>
                     </button>
                   </div>
@@ -339,13 +280,13 @@
               <div class="mb-3">
                 <div><label for="email" class="col-form-label">contraseña</label></div>
                 <div class="input-group mb-3">
-                  <span class="input-group-text inputLogin2" id="basic-addon1">
+                  <span class="input-group-text inputLogin2" id="basic-addon2">
                     <i class="bi bi-eye" id="openEye2"></i>
                     <i class="bi bi-eye-slash" id="closeEye2"></i>
                   </span>
                   <input type="password" class="form-control" id="Password"
                     placeholder="debe ingresar al menos: una mayuscula, una minuscula, un numero y un simbolo especial"
-                    aria-label="Username" aria-describedby="basic-addon1" id="password" required>
+                    aria-label="Username" aria-describedby="basic-addon2" id="password" required>
                 </div>
                 <div class="modal-footer">
                   <button type="submit" class="btnRegister" id="btnreg">Registrarse</button>
@@ -404,8 +345,311 @@
 
   </header>
   <main>
+
+    <div id="myCarousel" class="carousel slide carousel-fade d-none d-lg-flex flex-lg-column margenTiutlo"
+      data-bs-ride="carousel ">
+      <div class="container-fluid ">
+        <div class="row justify-content-center ">
+          <h2 class="text-center mt-5">Destacados y Recomendados</h2>
+        </div>
+      </div>
+      <div class="carousel-inner marginAbajo tamañoImagen" id="carousel-inner">
+        <div class="carousel-item active"> <!-- cuerpo primera imagen-->
+          <div class="container-fluid border-dark">
+            <div class="d-flex justify-content-center carruselPadding border-dark">
+              <div class="card border border-dark ">
+                <div class="row g-0 border border-dark">
+                  <div class="col-md-12 col-lg-8">
+                    <img src="./Assets/jeugoscarousell/pop.jpg" class="img-fluid rounded-start tamañoImagen"
+                      alt="prince of persia">
+                  </div>
+                  <div class="col-md-12 col-lg-4">
+                    <div class="card-body colorCard">
+                      <h2 class="card-title text-light tituloJuego">Prince of Persia</h2>
+                      <p class="card-text colorLetras h4 tamañoPalabras ">Prince of Persia: The Lost Crown un próximo
+                        videojuego de acción y aventura de plataformas 2.5D desarrollado y publicado por Ubisoft.</p>
+                      <div class="mb-md-5 mb-lg-5">
+                        <p class="colorLetras h6 marginVermas">Categoria: Aventura</p>
+                        <p class="colorLetras d-mb-none h6">Lanzamiento: Enero 2024</p>
+                        <p class="colorLetras h6 mb-lg-5">
+                          <i class="bi bi-microsoft">
+                            <i class="bi bi-apple ms-lg-1">
+
+                            </i></i>
+                        </p>
+                      </div>
+                      <div class="pt-3">
+                        <a href="#" class="btn btnCard marginBoton col-md-6 col-lg-2 posicionBoton">
+                          <h5>Ver mas</h2>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item"> <!-- cuerpo segunda imagen-->
+          <div class="container-fluid">
+            <div class="d-flex justify-content-center carruselPadding " id="iconClosed">
+              <div class="card border border-dark ">
+                <div class="row g-0">
+                  <div class="col-12 col-lg-8">
+                    <img src="./Assets/jeugoscarousell/avatar.webp" class="img-fluid rounded-start tamañoImagen"
+                      alt="gta,V">
+                  </div>
+                  <div class="col-md-12 col-lg-4">
+                    <div class="card-body colorCard">
+                      <h3 class="card-title text-light tituloJuego">Avatar Frontier of Pandora</h3>
+                      <p class="card-text colorLetras h4 tamañoPalabras">es un juego de acción y aventura en primera
+                        persona que se desarrolla en el mundo abierto de la Frontera Occidental de Pandora.</p>
+                      <div class="mb-md-5 mb-lg-5">
+                        <p class="colorLetras h6">Categoria: Acción</p>
+                        <p class="colorLetras h6">Lanzamiento: 7 Dic 2023</p>
+                        <p class="colorLetras mb-lg-5 h6"> <i class="bi bi-microsoft"></i></i></p>
+                      </div>
+                      <div class="pt-3">
+                        <a href="#" class="btn btnCard marginBoton col-md-6 col-lg-2 posicionBoton">
+                          <h5>Ver mas</h2>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item"> <!-- cuerpo tercera imagen-->
+          <div class="container-fluid">
+            <div class="d-flex justify-content-center carruselPadding " id="iconClosed">
+              <div class="card  border border-dark ">
+                <div class="row g-0">
+                  <div class="col-md-12 col-lg-8">
+                    <img src="./Assets/jeugoscarousell/maxresdefault.jpg" class="img-fluid rounded-start tamañoImagen"
+                      alt="Battle royald, armas">
+                  </div>
+                  <div class="col-md-12 col-lg-4">
+                    <div class="card-body colorCard">
+                      <h3 class="card-title text-light">XDefiant</h5>
+                        <p class="card-text colorLetras h4 tamañoPalabras">Es un videojuego de disparos en primera
+                          persona gratuito desarrollado por Ubisoft San Francisco y publicado por Ubisoft.</p>
+                        <div class="mb-md-5 mb-lg-5">
+                          <p class="colorLetras h6">Categoria: Shooters</p>
+                          <p class="colorLetras h6">Lanzamiento: 21 Jun 2024</p>
+                          <p class="colorLetras mb-lg-5 h6"> <i class="bi bi-microsoft"></i></i></p>
+                        </div>
+                        <div class="pt-3">
+                          <a href="#" class="btn btnCard marginBoton col-md-6 col-lg-2 posicionBoton">
+                            <h5>Ver mas</h2>
+                          </a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item"> <!-- cuerpo cuarta imagen-->
+          <div class="container-fluid">
+            <div class="d-flex justify-content-center carruselPadding " id="iconClosed">
+              <div class="card  border border-dark ">
+                <div class="row g-0">
+                  <div class="col-12 col-lg-8">
+                    <img src="./Assets/jeugoscarousell/acv.jpg" class="img-fluid rounded-start tamañoImagen"
+                      alt="Assasin Creed">
+                  </div>
+                  <div class="col-md-12 col-lg-4">
+                    <div class="card-body colorCard">
+                      <h3 class="card-title text-light">Assasin's Creed Valhalla</h5>
+                        <p class="card-text colorLetras h4 tamañoPalabras">Es un videojuego desarrollado por Ubisoft
+                          Montreal y publicado por Ubisoft. Es el decimosegundo en importancia y el vigesimosegundo
+                          lanzado dentro de la saga de Assassin Creed, y sucesor al juego del 2018 Assassin's Creed
+                          Odyssey.</p>
+                        <div class="mb-md-5 mb-lg-5">
+                          <p class="colorLetras h6">Categoria: Mundo Abierto</p>
+                          <p class="colorLetras h6">Lanzamiento: 10 Nov 2020</p>
+                          <p class="colorLetras mb-lg-5 h6"> <i class="bi bi-microsoft"><i
+                                class="bi bi-apple ms-lg-1"></i></i></p>
+                        </div>
+                        <div class="pt-3">
+                          <a href="#" class="btn btnCard marginBoton col-md-6 col-lg-2  posicionBoton">
+                            <h5>Ver mas</h2>
+                          </a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item"> <!-- cuerpo cuarta imagen-->
+          <div class="container-fluid">
+            <div class="d-flex justify-content-center carruselPadding " id="iconClosed">
+              <div class="card  border border-dark ">
+                <div class="row g-0">
+                  <div class="col-12 col-lg-8">
+                    <img src="./Assets/jeugoscarousell/capsule_616x353.jpg" class="img-fluid rounded-start tamañoImagen"
+                      alt="Far Cry">
+                  </div>
+                  <div class="col-md-12 col-lg-4">
+                    <div class="card-body colorCard">
+                      <h3 class="card-title text-light">Far Cry 6</h5>
+                        <p class="card-text colorLetras h4 tamañoPalabras">Es un videojuego de disparos en primera
+                          persona desarrollado por Ubisoft Toronto y publicado por Ubisoft. Es la sexta entrega
+                          principal de la serie Far Cry</p>
+                        <div class="mb-md-5 mb-lg-5">
+                          <p class="colorLetras h6">Categoria: Mundo Abierto</p>
+                          <p class="colorLetras h6">Lanzamiento: 7 Oct 2021</p>
+                          <p class="colorLetras mb-lg-5 h6"> <i class="bi bi-microsoft"></i></i></p>
+                        </div>
+                        <div class="pt-3">
+                          <a href="#" class="btn btnCard marginBoton col-md-6 col-lg-2 posicionBoton">
+                            <h5>Ver mas</h2>
+                          </a>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev ms-lg-4 marginCarrusel marginFlechas" href="#myCarousel" role="button"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span> <!-- flechas-->
+        <a class="carousel-control-next me-lg-4 marginCarrusel marginFlechas" href="#myCarousel" role="button"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span> <!-- flechas-->
+        </a>
+        <!-- indicadores de imagen-->
+        <div class="carousel-indicators d-flex justify-content-center d-none d-md-flex marginIndicador">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+    </div>
+
+    <!-- carrusel de cards para mobile-->
+    <div class="carrusel pt-5 d-lg-none"> <!-- card 1-->
+      <div class="elemento">
+        <div class="container-fluid">
+          <div class="d-flex">
+            <div class="card mb-3 border border-dark row col-12 col-md-12 mt-3">
+              <div class="row g-0">
+                <div class="col-12 col-lg-8">
+                  <img src="./Assets/mobile/ascm.webp" class="img-fluid rounded-start tamañoImagen"
+                    alt="assasin creed mirage">
+                </div>
+                <div class="col-md-12 col-lg-4">
+                  <div class="card-body colorCard">
+                    <h5 class="card-title text-light posicionPrecio tamañoLetra">Assasin Creed</h5>
+                    <p class="card-text "><small class="text-light">A partir de US$ 30 </small></p>
+                    <a href="#" class="btn btnCard">Ver mas</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="elemento"> <!-- card 2-->
+        <div class="container-fluid">
+          <div class="d-flex">
+            <div class="card mb-3 border border-dark row col-12 mt-3">
+              <div class="row g-0">
+                <div class="col-12 col-lg-8">
+                  <img src="./Assets/mobile/tcf.jpg" class="img-fluid rounded-start tamañoImagen" alt="The Crew">
+                </div>
+                <div class="col-md-12 col-lg-4">
+                  <div class="card-body colorCard">
+                    <h5 class="card-title text-light tamañoLetra posicionPrecio mt-1">The Crew Fest</h5>
+                    <p class="card-text"><small class="text-light">A partir de US$ 80</small></p>
+                    <a href="#" class="btn btnCard">Ver mas</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="elemento"> <!-- card 3-->
+        <div class="container-fluid">
+          <div class="d-flex">
+            <div class="card mb-3 border border-dark row col-12 mt-3">
+              <div class="row g-0">
+                <div class="col-12 col-lg-8">
+                  <img src="./Assets/mobile/sw.jpeg" class="img-fluid rounded-start tamañoImagen" alt="star wars">
+                </div>
+                <div class="col-md-12 col-lg-4">
+                  <div class="card-body colorCard">
+                    <h5 class="card-title text-light tamañoLetra">Star Wars</h5>
+                    <p class="card-text"><small class="text-light">A partir de US$ 34</small></p>
+                    <a href="#" class="btn btnCard">Ver mas</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="elemento"> <!-- card 4-->
+        <div class="container-fluid">
+          <div class="d-flex">
+            <div class="card mb-3 border border-dark row col-12 mt-3">
+              <div class="row g-0">
+                <div class="col-12 col-lg-8">
+                  <img src="./Assets/mobile/residente1.jpg" class="img-fluid rounded-start tamañoImagen"
+                    alt="just dance">
+                </div>
+                <div class="col-md-12 col-lg-4">
+                  <div class="card-body colorCard">
+                    <h5 class="card-title text-light">Just Dance</h5>
+                    <p class="card-text "><small class="text-light">A partir de US$ 50 </small></p>
+                    <a href="#" class="btn btnCard">Ver mas</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="elemento"> <!-- card 5-->
+        <div class="container-fluid">
+          <div class="d-flex">
+            <div class="card mb-3 border border-dark row col-12 mt-3">
+              <div class="row g-0">
+                <div class="col-12 col-lg-8">
+                  <img src="./Assets/mobile/anno.jpg" class="img-fluid rounded-start tamañoImagen" alt="anno 1800">
+                </div>
+                <div class="col-md-12 col-lg-4">
+                  <div class="card-body colorCard">
+                    <h5 class="card-title text-light">Anno 1800</h5>
+                    <p class="card-text"><small class="text-light">A partir de US$ 60</small></p>
+                    <a href="#" class="btn btnCard">Ver mas</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
     <section>
-      <div class="JuegosGrid" id="contenedorJuegos"></div>
+      <div class="JuegosGrid mt-5" id="contenedorJuegos"></div>
     </section>
 
   </main>
