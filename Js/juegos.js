@@ -120,43 +120,7 @@ const mostrarSearch = () => {
 const cancelarBusqueda = () => {
   searchbar.value = ''
 
-  const juegosJson = localStorage.getItem('juegos');
-
-  // Verificar si hay juegos en el localStorage
-  if (!juegosJson) {
-    console.error('No hay juegos almacenados en el localStorage.');
-    return;
-  }
-
-  // Convertir juegos JSON a objetos
-  const juegos = JSON.parse(juegosJson);
-
-  // Limpiar el contenido existente en el contenedor
-  contenedor.innerHTML = '';
-
-  // Renderizar cada juego en el HTML
-  juegos.forEach(juego => {
-    const idBoton = `verDetalles-${juego.id}`;
-    const nuevoElementoJuego = document.createElement('div');
-    nuevoElementoJuego.innerHTML = `
-      <div class="card mb-3" style="width: 100%;">
-        <img src="${juego.imagen}" class="card-img-top" alt="${juego.titulo}">
-        <div class="card-body">
-          <h5 class="card-title">${juego.titulo}</h5>
-          <a href="#" id='${idBoton}' class="btn btn-primary">Ver Detalles</a>
-        </div>
-      </div>
-    `;
-
-    // Agregar evento click al botón
-    const botonVerDetalles = nuevoElementoJuego.querySelector(`#${idBoton}`);
-    botonVerDetalles.addEventListener('click', () => {
-      mostrarDetallesDelJuego(juego.id);
-    });
-
-    // Agregar el nuevo elemento al contenedor
-    contenedor.appendChild(nuevoElementoJuego);
-  });
+  renderizarJuegosEnHTML()
 
   searchbtn.style.display = 'inline-block'
   searchbtn2.style.display = 'inline-block'
@@ -171,6 +135,6 @@ cancelsearchbtn.addEventListener('click', cancelarBusqueda)
 cancelsearchbtn2.addEventListener('click', cancelarBusqueda)
 
 
-renderizarJuegosEnHTML()
-  .then(mensaje => console.log(mensaje))
-  .catch(error => console.error(error));
+document.addEventListener('DOMContentLoaded', function () {
+  renderizarJuegosEnHTML();
+});

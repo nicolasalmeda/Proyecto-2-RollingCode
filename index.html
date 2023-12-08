@@ -16,9 +16,9 @@
 <body>
   <header>
     <nav class="navbar fixed-top mb-5" id="navbar">
-      <div class="container-fluid">
-        <div class="d-none d-md-block d-flex" alt="NavBar">
-          <div class="d-flex flex-row mb-3" id="admin">
+      <div class="container-fluid d-flex">
+        <div class="d-none d-lg-block d-flex" alt="NavBar">
+          <div class="d-flex flex-row mb-3">
 
             <div class="p-2">
               <a class="navbar-brand text-light " href="#">
@@ -45,14 +45,14 @@
             </div>
 
             <div class="p-2">
-              <a class="navbar-brand" href="./index.html#allGames">
-                <span>Juegos</span>
+              <a class="navbar-brand" href="./Pages/About.html">
+                <span>Sobre Nosotros</span>
               </a>
             </div>
 
-            <div class="p-2">
-              <a class="navbar-brand" href="./Pages/About.html">
-                <span>Sobre Nosotros</span>
+            <div class="p-2" id="juegosDeseados">
+              <a class="navbar-brand" href="./Js/juegosDesados.js">
+                <span>Lista Juegos Deseados</span>
               </a>
             </div>
 
@@ -65,14 +65,7 @@
               </button>
             </div>
 
-            <div class="input-group p-2">
-              <span class="input-group-text inputLogin2" id="basic-addon1">
-                <i class=" bi bi-search" id="searchbtn"></i>
-                <i class="bi bi-x-square" id="cancelsearchbtn"></i>
-              </span>
-              <input type="search" class="form-control inputLogin " placeholder="Ingrese nombre del juego..."
-                aria-label="Username" aria-describedby="basic-addon1" id="searchbar">
-            </div>
+
 
             <div class="p-2" id="closeSessionNoneJS">
               <a class="navbar-brand" href="./index.html">
@@ -83,7 +76,16 @@
           </div>
         </div>
 
-        <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="offcanvas"
+        <div class="input-group p-2 search__bar d-lg-flex justify-content-center align-items-center d-none">
+          <span class="input-group-text inputLogin2" id="basic-addon1">
+            <i class=" bi bi-search" id="searchbtn"></i>
+            <i class="bi bi-x-square" id="cancelsearchbtn"></i>
+          </span>
+          <input type="search" class="form-control inputLogin " placeholder="Ingrese nombre del juego..."
+            aria-label="Username" aria-describedby="basic-addon1" id="searchbar">
+        </div>
+
+        <button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -118,17 +120,18 @@
                   </a>
                 </li>
                 <li class="nav-item border-top">
-                  <a class="nav-link" href="./index.html#allGames">
-                    <i class="bi bi-controller"></i>
-                    <span>Juegos</span>
-                  </a>
-                </li>
-                <li class="nav-item border-top">
                   <a class="nav-link" href="./Pages/About.html">
                     <i class="bi bi-file-person"></i>
                     <span>Sobre Nosotros</span>
                   </a>
                 </li>
+                <li class="nav-item border-top" id="jeugosDeseadosModal">
+                  <a class="nav-link" href="./Pages/juegosDeseados.html">
+                    <i class="bi bi-card-list"></i>
+                    <span>Lista Juegos Deseados</span>
+                  </a>
+                </li>
+
                 <li class="nav-item border-top ">
                   <div class="input-group mb-3">
                     <span class="input-group-text inputLogin2 mt-2" id="basic-addon1">
@@ -343,7 +346,7 @@
   </header>
   <main>
 
-    <div id="myCarousel" class="carousel slide carousel-fade d-none d-md-flex flex-md-column margenTiutlo"
+    <div id="myCarousel" class="carousel slide carousel-fade d-none d-lg-flex flex-lg-column margenTiutlo"
       data-bs-ride="carousel ">
       <div class="container-fluid ">
         <div class="row justify-content-center ">
@@ -537,7 +540,7 @@
     </div>
 
     <!-- carrusel de cards para mobile-->
-    <div class="carrusel pt-5 d-md-none"> <!-- card 1-->
+    <div class="carrusel pt-5 d-lg-none"> <!-- card 1-->
       <div class="elemento">
         <div class="container-fluid">
           <div class="d-flex">

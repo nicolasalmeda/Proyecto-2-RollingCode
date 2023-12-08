@@ -15,9 +15,10 @@ const logNone = document.getElementById('logNoneJS');
 const closeSessionNone= document.getElementById('closeSessionNoneJS')
 const accountNone = document.getElementById('accountNone');
 const adminMobile = document.getElementById('adminNone');
- const modalNoneSession = document.getElementById('modalNoneSession')
-const test = document.getElementsByClassName('test');
-const loginform = document.getElementById('logForm');
+const modalNoneSession = document.getElementById('modalNoneSession')
+const juegosDeseados = document.getElementById('juegosDeseados')
+const juegosDeseadosModal = document.getElementById('juegosDeseadosModal')
+
 
 
 usercloseEyeG.style.display = 'none';
@@ -26,6 +27,8 @@ userAdmin.style.display = 'none';
 adminMobile.style.display = 'none';
 closeSessionNone.style.display= 'none';
 modalNoneSession.style.display='none'
+juegosDeseados.style.display = 'none'
+juegosDeseadosModal.style.display = 'none'
 
 const showPass2 = () => {
     if(userpassword.type === 'password'){
@@ -100,12 +103,13 @@ const log = () => {
             localStorage.setItem('logginUser', JSON.stringify(validUser));
             logNone.style.display= 'none'
             registrarse.style.display = 'none'
-
             closeSessionNone.style.display = 'inline-block';
             logNone.style.display = 'none';
             modalNoneSession.style.display = 'inline-block'
             registrarse.style.display = 'none'
             accountNone.style.display = 'none';
+            juegosDeseados.style.display = 'inline-block'
+            juegosDeseadosModal.style.display = 'inline-block'
             
 
         if(validUser._admin){
@@ -135,7 +139,8 @@ const cerrarSesion = () => {
     // Mostrar los botones de inicio de sesión y registro
     logNone.style.display = 'inline-block';
     registrarse.style.display = 'inline-block';
-    
+    juegosDeseados.style.display = 'none'
+    juegosDeseadosModal.style.display = 'none'
 
     // Ocultar el botón y el div de administración
     userAdmin.style.display = 'none';
@@ -156,6 +161,8 @@ const verificarUsuarioLog = () => {
         registrarse.style.display = 'none';
         closeSessionNone.style.display = 'inline-block';
         modalNoneSession.style.display = 'inline-block';
+        juegosDeseados.style.display = 'inline-block'
+        juegosDeseadosModal.style.display = 'inline-block'
         accountNone.style.display = 'none';
         if(usuariosLog._admin === true) {
             userAdmin.style.display = 'inline-block';
@@ -173,6 +180,8 @@ const verificarUsuarioLog = () => {
         accountNone.style.display = 'inline-block';
         userAdmin.style.display = 'none';
         adminMobile.style.display = 'none';
+        juegosDeseados.style.display = 'none'
+        juegosDeseadosModal.style.display = 'none'
     }
 }
 
