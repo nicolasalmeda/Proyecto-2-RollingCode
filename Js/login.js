@@ -10,11 +10,22 @@ const usercloseEyeG = document.getElementById('closeEye');
 const userpassword = document.getElementById('password');
 const userMail = document.getElementById('emailG');
 const registrarse = document.getElementById('registrarse')
-const users = JSON.parse(localStorage.getItem('usuarios')) || [];
-const usersLog = JSON.parse(localStorage.getItem('logginUser')) || [];
+const userAdmin = document.getElementById('userAdmin');
+const logNone = document.getElementById('logNoneJS');
+const closeSessionNone= document.getElementById('closeSessionNoneJS')
+const accountNone = document.getElementById('accountNone');
+const adminMobile = document.getElementById('adminNone');
+ const modalNoneSession = document.getElementById('modalNoneSession')
+const test = document.getElementsByClassName('test');
+const loginform = document.getElementById('logForm');
 
 
 usercloseEyeG.style.display = 'none';
+
+userAdmin.style.display = 'none';
+adminMobile.style.display = 'none';
+closeSessionNone.style.display= 'none';
+modalNoneSession.style.display='none'
 
 const showPass2 = () => {
     if(userpassword.type === 'password'){
@@ -27,21 +38,6 @@ const showPass2 = () => {
         usercloseEyeG.style.display = 'none'
     }
 }
-
-const userAdmin = document.getElementById('userAdmin');
-const logNone = document.getElementById('logNoneJS');
-const closeSessionNone= document.getElementById('closeSessionNoneJS')
-const accountNone = document.getElementById('accountNone');
-const adminMobile = document.getElementById('adminNone');
- const modalNoneSession = document.getElementById('modalNoneSession')
-const test = document.getElementsByClassName('test');
-const loginform = document.getElementById('logForm');
-
-userAdmin.style.display = 'none';
-adminMobile.style.display = 'none';
-closeSessionNone.style.display= 'none';
-modalNoneSession.style.display='none'
-
 
 const log = () => {
     modalLogin.show();
@@ -151,6 +147,35 @@ const cerrarSesion = () => {
     accountNone.style.display = 'inline-block';
 };
 
+const verificarUsuarioLog = () => {
+    const usuariosLog = JSON.parse(localStorage.getItem('logginUser')) || [];
+    
+
+    if(usuariosLog._correo) {
+        logNone.style.display = 'none';
+        registrarse.style.display = 'none';
+        closeSessionNone.style.display = 'inline-block';
+        modalNoneSession.style.display = 'inline-block';
+        accountNone.style.display = 'none';
+        if(usuariosLog._admin === true) {
+            userAdmin.style.display = 'inline-block';
+            adminMobile.style.display = 'inline-block';
+        }else{
+            userAdmin.style.display = 'none';
+            adminMobile.style.display = 'none';
+        }
+    
+    }else{
+        logNone.style.display = 'inline-block';
+        registrarse.style.display = 'inline-block';
+        closeSessionNone.style.display = 'none';
+        modalNoneSession.style.display = 'none';
+        accountNone.style.display = 'inline-block';
+        userAdmin.style.display = 'none';
+        adminMobile.style.display = 'none';
+    }
+}
+
 
 btnLogin.addEventListener('click', log);
 btnShowPassword.addEventListener('click', showPass2);
@@ -158,6 +183,10 @@ modalNoneSession.addEventListener('click', cerrarSesion)
 closeSessionNone.addEventListener('click',cerrarSesion)
 
 
+
+
 cargaUsuarios()
 almacenarJuegosEnLocalStorage()
-    
+document.addEventListener('DOMContentLoaded', function () {
+    verificarUsuarioLog()
+});

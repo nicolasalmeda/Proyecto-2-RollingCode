@@ -7,10 +7,9 @@ const useropenEye = document.getElementById('openEye2');
 const usercloseEye = document.getElementById('closeEye2');
 const contraseñaInput=document.getElementById("Password");
 const form= document.getElementById("miFormulario");
-const parrafo=document.getElementById("btnreg");
-const mensajeRegistro= document.getElementById('mensajeRegistro');
-const basicaddon1 = document.getElementById('basic-addon1');
+const basicaddon1 = document.getElementById('basic-addon2');
 const formula = document.getElementById('btnreg')
+btnRegisterModal = document.getElementById('btnRegisterModal')
 usercloseEye.style.display = 'none';
 
 //efecto visibilidad de contraseña
@@ -69,3 +68,4 @@ function resetForm() {
 
 basicaddon1.addEventListener('click',showPass)
 formula.addEventListener('click',formulario)
+

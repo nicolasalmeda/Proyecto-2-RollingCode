@@ -34,7 +34,10 @@
   padding: 0;
 }
 
-.btnCard{
+
+
+ /* Boton */
+ .btnCard{
   --bs-btn-color: var(--bs-white);
   --bs-btn-bg: var( --color-5);
   --bs-btn-border-color: var( --color-5);
@@ -48,15 +51,8 @@
   --bs-btn-active-border-color:var(--color-5-fuerte-2);
 }
 
-body{
-  background-color: #15141c;
-  /* min-height: 100vh; */
-}
 
-main{
-  padding: 50px;  
-  /* flex-grow: 1; */
-  }
+
 
 
 /*-------------------NavBar-------------------*/
@@ -147,22 +143,8 @@ box-shadow: -1px 13px 23px -5px rgba(79, 93, 170, 1);
   }
 }
 
-
-.tamañoImagen {
-  height: 150px; /* Ajusta la altura según sea necesario */
-}
-
-/* Estilo para las tarjetas */
-.colorCard {
-  height: 500px; /* O ajusta la altura según sea necesario */
-}
-
-/* Alinea la descripción en la parte inferior de la tarjeta */
-.card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+body{
+  background-color: #15141c;
 }
 
 
@@ -183,7 +165,9 @@ box-shadow: -1px 13px 23px -5px rgba(79, 93, 170, 1);
 
 /*------------Seccion 1 ------------*/
 
-
+main{
+padding: 50px;  
+}
 
 .padding {
   padding: 150px;
@@ -277,7 +261,7 @@ color: #68A5A6;
     }
       
   .card-body {
-      height: 200px;
+      height: 300px;
     }
 
 }
@@ -315,7 +299,7 @@ color: #68A5A6;
      font-size: 20px;
   }
   .card-body {
-    height: 150px;
+    height: 700px;
   }
   #carousel-inner img {
     width: 100%;
@@ -447,20 +431,6 @@ color: #68A5A6;
 }
 }
 
-.JuegosGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 230px);
-  gap: 50px;
-  padding: 35px;
-  justify-content: center;
-}
-
-@media (max-width: 560px) {
-  .JuegosGrid {
-    grid-template-columns: 100%;
-  }
-}
-
 /*------------FOOTER------------*/
 
 footer{
@@ -484,7 +454,6 @@ footer{
 .linkFooterMG {
   text-decoration: none;
   font-size: 17px;
-  list-style: none;
 }
 .linkFooterContactoMG{
   color: inherit;
@@ -507,9 +476,4 @@ footer{
   width: 50%;
   height: auto; 
 }
-}
-
-.pre-footer{
-height: 30%;
-background-color: #010101;
 }

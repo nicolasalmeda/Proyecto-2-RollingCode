@@ -1,10 +1,11 @@
 export default class Juego {
-  constructor(id, titulo, categoria, precio, imagen, descripcion, requisitosDelSistema, desarrollador, reseñas) {
+  constructor(id, titulo, categoria, precio, imagen, gif, descripcion, requisitosDelSistema, desarrollador, reseñas) {
     this._id = id;
     this._titulo = titulo;
     this._categoria = categoria;
     this._precio = precio;
     this._imagen = imagen;
+    this._gif = gif
     this._descripcion = descripcion;
     this._requisitosDelSistema = requisitosDelSistema;
     this._desarrollador = desarrollador;
@@ -30,6 +31,10 @@ export default class Juego {
 
   get imagen() {
     return this._imagen;
+  }
+
+  get gif() {
+    return this._gif;
   }
 
   get descripcion() {
@@ -91,6 +96,7 @@ export default class Juego {
       categoria: this._categoria,
       precio: this._precio,
       imagen: this._imagen,
+      gif: this._gif,
       descripcion: this._descripcion,
       requisitosDelSistema: this._requisitosDelSistema,
       desarrollador: this._desarrollador,
