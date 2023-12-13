@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Oswald:wght@500&family=Roboto:wght@100&display=swap');
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Roboto', sans-serif; */
 :root {
 
   --color-1: #B9B1A9;
@@ -29,7 +33,7 @@
   }
 
 *{
-  color:#68A5A6;
+  color: #68A5A6;
   margin: 0;
   padding: 0;
 }
@@ -144,7 +148,7 @@ box-shadow: -1px 13px 23px -5px rgba(79, 93, 170, 1);
 }
 
 body{
-  background-color: #15141c;
+  background: -webkit-linear-gradient(#15141c, #2e2c42,#201D2C,#313457,#393e6a);
 }
 
 
@@ -465,7 +469,7 @@ color: #68A5A6;
 }
 
 .title-product h3{
-  font-family: Georgia, 'Times New Roman', Times, serif;
+ font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
   color: #eee;
   font-weight: 500;
@@ -536,4 +540,78 @@ color: #68A5A6;
   flex-direction: column;
   justify-content: space-between;
   padding: 10px 7px;
+}
+.img{
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.9));
+  height: 100%;
+  width: 100%;
+  
+    
+}
+.contenedor-superposicion
+{
+  position: relative;
+}
+.contenedor-superposicion h2 
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.title-product {
+  font-family: 'Oswald', sans-serif;;
+  text-transform: uppercase;
+  color: #eee;
+  font-weight: 500;
+}
+.degrade
+{
+  background: -webkit-linear-gradient( #b7e3df, #03685b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Oswald', sans-serif;
+  
+}
+h1 h2 h3 
+{
+  font-family: 'Oswald', sans-serif;
+}
+p
+{
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+.colorboton
+{
+  background-color: black;
+}
+
+
+/* Efecto de zoom al pasar el mouse sobre los botonoes  */
+.container-boton-zoom{
+  overflow: hidden;
+  padding: 13px 0;
+}
+.container-boton-zoom button{
+  transition: transform .6s;
+}
+.container-boton-zoom  button:hover{
+  transform: translate(0%,-7%);
+}
+
+.degradebotones
+{
+  background: linear-gradient(70deg, #15141c, #1a1925,#201D2C,#313457,#313457,#393e6a,#393e6a,#41487D);
+}
+
+.a 
+{
+  text-decoration: none;
+  color: #68A5A6;
+}
+.a:hover
+{
+  color: white;
 }

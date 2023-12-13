@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="../Css/style.css">
   <link rel="stylesheet" href="../Css/index.css">
   <script src="https://kit.fontawesome.com/e8562b1a7f.js" crossorigin="anonymous"></script>
-  <title>Document</title>
+  <title>GamerSoft</title>
 </head>
 
 <body>
@@ -35,7 +35,7 @@
 
             <div class="p-2">
               <a class="navbar-brand text-light " href="../index.html">
-                <span class="text-light">RollingSoft</span>
+                <span class="text-light">GamerSoft</span>
               </a>
             </div>
 
@@ -58,13 +58,13 @@
             </div>
 
             <div class="p-2">
-              <a class="navbar-brand" href="./Pages/About.html">
+              <a class="navbar-brand" href="error404.html">
                 <span>Sobre Nosotros</span>
               </a>
             </div>
 
             <div class="p-2" id="juegosDeseados">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="juegosDeseados.html">
                 <span>Lista Juegos Deseados</span>
               </a>
             </div>
@@ -72,7 +72,7 @@
             <div class="px-2 pTop test" id="userAdmin">
               <button type="button" class="btn link-dark text-decoration-none" data-bs-toggle="modal"
                 data-bs-target="#modalAdmin">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="error404.html">
                   <span>Administracion</span>
                 </a>
               </button>
@@ -81,7 +81,7 @@
 
 
             <div class="p-2" id="closeSessionNoneJS">
-              <a class="navbar-brand" href="./index.html">
+              <a class="navbar-brand" href="../index.html">
                 <span>Cerrar Sesión</span>
               </a>
             </div>
@@ -116,7 +116,7 @@
 
           <!--Header-->
           <div class="offcanvas-header bg-primary rounded-start-pill bkgDegBlue">
-            <img src="./Assets/logo.png" id="logoNav" alt="logo">
+            <img src="../Assets/logo.png" id="logoNav" alt="logo">
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Main</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
@@ -127,19 +127,19 @@
             <div class="px-4">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="./index.html">
+                  <a class="nav-link active" aria-current="page" href="../index.html">
                     <i class="bi bi-house"></i>
                     <span>Pagina Principal</span>
                   </a>
                 </li>
                 <li class="nav-item border-top">
-                  <a class="nav-link" href="./Pages/About.html">
+                  <a class="nav-link" href="error404.html">
                     <i class="bi bi-file-person"></i>
                     <span>Sobre Nosotros</span>
                   </a>
                 </li>
                 <li class="nav-item border-top" id="juegosDeseadosModal">
-                  <a class="nav-link" href="./Pages/juegosDeseados.html">
+                  <a class="nav-link" href="juegosDeseados.html">
                     <i class="bi bi-card-list"></i>
                     <span>Lista Juegos Deseados</span>
                   </a>
@@ -207,15 +207,6 @@
       </div>
     </nav>
 
-
-
-
-
-
-
-
-
-
     <!--Modal Login-->
 
     <div class="modal mt-5 close" id="loginBtn" tabindex="-2" alt="loginModal">
@@ -229,7 +220,7 @@
             <form>
               <div class="mb-3">
                 <label for="email" class="col-form-label"></label>
-                <input type="email" class="form-control inputLogin" id="emailG" placeholder="Email">
+                <input type="email" class="form-control inputLogin " id="emailG" placeholder="Email">
               </div>
               <div class="input-group mb-3">
                 <span class="input-group-text inputLogin2" id="basic-addon1"">
@@ -251,17 +242,20 @@
               <div class="modal-footer d-flex justify-content-evenly accountG">
                 <button type="button" class="btn bkgDegBlue textHeader w-25" id="loginButton">Iniciar
                   sesión</button>
-                <button type="button" class="btn bkgDegBlue textHeader w-25" data-bs-target="#exampleModal"><a
-                    href="./Pages/error404.html">Registrarse</a></button>
+                 
+                    <button type="button" class="btn bkgDegBlue textHeader w-25 " data-bs-toggle="modal"
+                      data-bs-target="#goLogin">
+                      <a class="navbar-brand" href="#">
+                        <span>Registrarse</span>
+                      </a>
+                    </button>
+                  
               </div>
             </form>
           </div>
         </div>
       </div>
     </div>
-
-
-
 
 
     <!--modal register-->
@@ -274,20 +268,20 @@
               aria-label="Close"></button>
           </div>
           <div class="d-flex justify-content-center" id="logo-container">
-            <img class="logo" src="./Assets/logo.png" alt="" width="50px" height="50px">
+            <img class="logo" src="../Assets/logo.png" alt="" width="50px" height="50px">
           </div>
           <div class="modal-body">
             <form id="miFormulario">
               <div class="mb-3">
                 <label for="recipient-name" class="col-form-label">Nombre:</label>
-                <input type="text" class="form-control" id="recipient-name" placeholder="roberto" required>
+                <input type="text" class="form-control " id="recipient-name" placeholder="roberto" required>
               </div>
               <div class="mb-3">
                 <label for="recipient-apellido" class="col-form-label">Apellido:</label>
-                <input type="text" class="form-control" id="recipient-apellido" placeholder="perez" required>
+                <input type="text" class="form-control " id="recipient-apellido" placeholder="perez" required>
               </div>
               <div class="mb-3">
-                <label for="email" class="col-form-label">Email</label>
+                <label for="email" class="col-form-label ">Email</label>
                 <input type="email" class="form-control " id="emailBM" placeholder="examle@gmail.com" required>
               </div>
               <div class="mb-3">
@@ -297,7 +291,7 @@
                     <i class="bi bi-eye" id="openEye2"></i>
                     <i class="bi bi-eye-slash" id="closeEye2"></i>
                   </span>
-                  <input type="password" class="form-control" id="Password"
+                  <input type="password" class="form-control " id="Password"
                     placeholder="debe ingresar al menos: una mayuscula, una minuscula, un numero y un simbolo especial"
                     aria-label="Username" aria-describedby="basic-addon2" id="password" required>
                 </div>
@@ -324,11 +318,7 @@
       </div>
     </div>
 
-
-
-
-
-    <!--Modal de recucperacion de contraseña-->
+    <!--Modal de recuperacion de contraseña-->
 
     <div class="modal mt-5" id="rePass" tabindex="-2" alt="contraseña">
       <div class="modal-dialog mt-5">
@@ -363,7 +353,7 @@
       <div class="title-product text-center mb-5">
         <div class="circle circle-red"></div>
         <h3 class="my-3 fs-1 ">Lista juegos deseados de: <strong id="nombreLD"></strong></h3>
-        <a href="../i" class="fs-5">Ver Mas Juegos <i class="fa-solid fa-caret-right" aria-hidden="true"></i></a>
+        <a href="../index.html" class="fs-5">Ver Mas Juegos <i class="fa-solid fa-caret-right" aria-hidden="true"></i></a>
       </div>
       <div class="row justify-content-center" id="contenedor">
 
@@ -400,7 +390,7 @@
   </main>
   <footer>
     <div class="d-flex pre-footer">
-      <p class="p-2 ps-2">Visita nuestros canales</p>
+     
       <div class="d-flex flex-grow-1 justify-content-center">
         <i class="bi bi-twitter m-2 text-light fs-4"></i>
         <i class="bi bi-facebook m-2 text-light fs-4"></i>
@@ -411,34 +401,57 @@
       </div>
     </div>
     <div class="d-flex flex-column flex-md-row flex-lg-row flex-wrap">
-      <div class="col-12 col-md-12 col-lg-4 d-flex flex-column text-center p-4">
-        <p class="fs-3 text-center text-light">RollingSoft</p>
+      <div class="col-12 col-md-12 col-lg-2 d-flex flex-column text-center p-4">
+        <p class="fs-3 text-center text-light">GamerSoft</p>
         <ul class="linkFooterMG p-3">
-          <li class="linkFooterMG fs-4">Contacto</li>
-          <li class="linkFooterMG fs-4">Privacidad</li>
+          <li class="linkFooterMG fs-4" ><a href="error404.html" class="a">Contacto </a></li>
+          <li class="linkFooterMG fs-4" ><a href="error404.html" class="a">Privacidad </a></li>
           <ul class="linkFooterMG p-2">
-            <li class="linkFooterMG fs-7 ">Condiciones</li>
-            <li class="linkFooterMG fs-7">Publicidad por internet</li>
-            <li class="linkFooterMG fs-7">Configurar Cookies</li>
+            <li class="linkFooterMG fs-7" ><a href="error404.html" class="a">Terminos y condiciones </a></li>
+            <li class="linkFooterMG fs-7" ><a href="error404.html" class="a">Publicidad por internet </a></li>
+            <li class="linkFooterMG fs-7" ><a href="error404.html" class="a">Configurar Cookies </a></li>
           </ul>
         </ul>
       </div>
-      <div class="col-12 col-md-12 col-lg-4 d-flex flex-wrap text-center p-4">
-        <div class="col-4 d-flex flex-column text-center fs-4 ">
-          <p>Soporte</p>
-          <p>Rolling Connect</p>
-        </div>
-        <div class="col-4 d-flex flex-column text-center fs-4 ">
-          <p>Empresa</p>
-          <p>Prensa</p>
-          <p>Inversores</p>
-        </div>
-        <div class="col-4 d-flex flex-column text-center fs-4">
-          <p>Ofertas de Trabajo</p>
-          <p>Oficinas</p>
-        </div>
+      <div class="col-12 col-md-12 col-lg-2 d-flex flex-column text-center p-4">
+        <p class="fs-3 text-center text-light">GamerSoft Soporte</p>
+        <ul class="linkFooterMG p-3">
+          <li class="linkFooterMG fs-4" ><a href="error404.html" class="a">Soporte </a></li>
+          <li class="linkFooterMG fs-4" ><a href="error404.html" class="a">Gamer Conect </a></li>
+        </ul>
       </div>
-      <div class="col-12 col-md-12 col-lg-4 text-center d-flex flex-column p-4 align-items-center">
+      <div class="col-12 col-md-12 col-lg-2 d-flex flex-column text-center p-4">
+        <p class="fs-3 text-center text-light">Nuestras Redes</p>
+        <ul class="linkFooterMG p-3">
+          <div class="d-flex flex-grow-1 justify-content-center">
+            <i class="bi bi-twitter m-2 text-light fs-4"></i>
+            <i class="bi bi-facebook m-2 text-light fs-4"></i>
+            <i class="bi bi-twitch m-2 text-light fs-4"></i>
+            <i class="bi bi-youtube m-2 text-light fs-4"></i>
+            <i class="bi bi-instagram m-2 text-light fs-4"></i>
+            <i class="bi bi-discord m-2 text-light fs-4"></i>
+          </div>
+
+        </ul>
+      </div>
+      <div class="col-12 col-md-12 col-lg-2 d-flex flex-column text-center p-4">
+        <p class="fs-3 text-center text-light">Comunidad</p>
+        <ul class="linkFooterMG p-3">
+          <li class="linkFooterMG fs-4" ><a href="error404.html" class="a">Empresa </a></li>
+          <li class="linkFooterMG fs-4" ><a href="error404.html" class="a">Prensa </a></li>
+          <li class="linkFooterMG fs-4" ><a href="error404.html" class="a">Invensores </a></li>
+
+        </ul>
+      </div>
+      <div class="col-12 col-md-12 col-lg-2 d-flex flex-column text-center p-4">
+        <p class="fs-3 text-center text-light">Te Puede Interesar</p>
+        <ul class="linkFooterMG p-3">
+          <li class="linkFooterMG fs-4" ><a href="error404.html" class="a">Ofertas de Trabajo </a></li>
+          <li class="linkFooterMG fs-4" ><a href="error404.html" class="a">Oficinas </a></li>
+
+        </ul>
+      </div>
+      <div class="col-12 col-md-12 col-lg-2 text-center d-flex flex-column p-4 align-items-center">
         <img class="logoFooterMG" src="../Assets/footerimg.png" alt="">
         <p class="mt-5 fs-6">© 2023 Ubisoft Entertainment. All Rights Reserved. Ubisoft, Ubi.com and the Ubisoft logo
           are
@@ -446,6 +459,8 @@
           Ubisoft Entertainment in the U.S. and/or other countries.</p>
 
       </div>
+      
+      
     </div>
 
   </footer>

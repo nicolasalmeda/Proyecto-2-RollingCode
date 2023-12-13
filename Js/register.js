@@ -9,7 +9,7 @@ const contraseñaInput=document.getElementById("Password");
 const form= document.getElementById("miFormulario");
 const basicaddon1 = document.getElementById('basic-addon2');
 const formula = document.getElementById('btnreg')
-btnRegisterModal = document.getElementById('btnRegisterModal')
+const btnRegisterModal = document.getElementById('btnRegisterModal')
 usercloseEye.style.display = 'none';
 
 //efecto visibilidad de contraseña

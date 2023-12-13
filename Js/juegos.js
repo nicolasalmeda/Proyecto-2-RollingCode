@@ -53,7 +53,7 @@ const renderizarJuegosEnHTML = () => {
               <p class="price fs-3">$${juego.precio} <span>$${ (juego.precio-(juego.precio * 0.20)).toFixed(2)  }</span></p>
               <div class="mt-2">
              
-                  <a href="#" id='${idBoton}' class="btn-customized">Ver Detalles</a>
+                  <a href="./Pages/juegoDetail.html" id='${idBoton}' class="btn-customized">Ver Detalles</a>
               </div>
           </div>
       </div>
