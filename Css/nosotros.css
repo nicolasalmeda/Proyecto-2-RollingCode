@@ -33,6 +33,11 @@ main{
 #team1{
     color:#13b8ff  ;
 }
+.card-body p{
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
 
 .team-card {
     text-align: center;
@@ -46,6 +51,7 @@ main{
 }
 .team-card .card img{
     object-fit: cover;
+    
 }
   
 .card-subtitle {
