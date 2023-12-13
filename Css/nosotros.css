@@ -1,0 +1,87 @@
+/* Variables de colores */
+:root {
+    --primary-color: #800000;
+    --gold-color:  #ebc700;
+    --main-color:  #111;
+}
+
+
+main{
+    flex-grow: 1;
+    background: var(--main-color);
+}
+
+
+
+/*------------------------------- Sobre nosotros ------------------------------------*/
+
+.featured-article {
+    background: linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.4)) 
+    ,url("../img/about.jpg");
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    padding: 100px 0;
+    color: white;
+    text-align: center;
+}
+#nosotros-equipo h1{
+    color:  #fb14ff ;
+
+    
+}
+#team1{
+    color:#13b8ff  ;
+}
+
+.team-card {
+    text-align: center;
+    justify-content: center;
+   
+}
+  
+.team-card .card {
+    border-radius: 15%
+    ;
+}
+.team-card .card img{
+    object-fit: cover;
+}
+  
+.card-subtitle {
+    color: #ebc700;
+}
+
+.text-color-eee{
+    color: #eee;
+}
+
+.link-light :hover{
+    color: #fb14ff;
+    transition: 200ms;
+}
+
+
+@media screen and (max-width: 768px) {
+    .video{
+        height: 300px;
+    };
+}
+
+@media screen and (max-width: 991px) {
+    .textoHover {
+        visibility: visible;
+        position: static;
+        background: transparent;
+    }
+    nav li {
+        margin: 5px 0;
+        border-bottom: 1px solid #444;
+    }
+    nav li:nth-child(1) {
+        background: transparent;
+    }
+    header input{
+        width: 100%;
+    }
+}
