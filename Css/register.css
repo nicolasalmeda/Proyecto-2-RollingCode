@@ -55,7 +55,7 @@ display: flex;
   box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
 }
 .form-control:hover{
-background-color: #171717;
+background-color: white
 }
 .modal-body{
   background-color: #15141c; 
@@ -96,7 +96,7 @@ background-color: #171717;
   outline: none;
   transition: .4s ease-in-out;
   background-image: linear-gradient(163deg, #68A5A6 0%, #201D2C 100%);
-  color: rgb(0, 0, 0);
+ 
 }
 .inputLogin2{
   display: flex;
