@@ -6,18 +6,458 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pagina de juegos">
+    <meta name="keywords" content="juegos, steam, comprar juegos, juegos online">
+    <meta name="author" content="team 1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    
+  
+    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="../Css/index.css">
+    <script src="https://kit.fontawesome.com/e8562b1a7f.js" crossorigin="anonymous"></script>
   <title>Document</title>
 </head>
 
 <body>
-  <header></header>
-  <main>
-    <section>
-      <h3>Lista juegos deseados de: <strong id="nombreLD"></strong></h3>
-      <div id="contenedor"></div>
-    </section>
+  <header>
+    <nav class="navbar fixed-top mb-5" id="navbar">
+      <div class="container-fluid d-flex">
+        <div class="d-none d-lg-block d-flex" alt="NavBar">
+          <div class="d-flex flex-row mb-3">
+
+            <div class="p-2">
+              <a class="navbar-brand text-light " href="#">
+                <span class="text-light">RollingSoft</span>
+              </a>
+            </div>
+
+            <div class="px-2 pTop " id="logNoneJS">
+              <button type="button" class="btn link-dark text-decoration-none" data-bs-toggle="modal"
+                data-bs-target="#loginBtn">
+                <a class="navbar-brand" href="#">
+                  <span>Iniciar Sesión</span>
+                </a>
+              </button>
+            </div>
+
+            <div class="px-2 pTop" id="registrarse">
+              <button type="button" class="btn link-dark text-decoration-none" data-bs-toggle="modal"
+                data-bs-target="#goLogin">
+                <a class="navbar-brand" href="#">
+                  <span>Registrarse</span>
+                </a>
+              </button>
+            </div>
+
+            <div class="p-2">
+              <a class="navbar-brand" href="./Pages/About.html">
+                <span>Sobre Nosotros</span>
+              </a>
+            </div>
+
+            <div class="p-2" id="juegosDeseados">
+              <a class="navbar-brand" href="./Pages/juegosDesados.html">
+                <span>Lista Juegos Deseados</span>
+              </a>
+            </div>
+
+            <div class="px-2 pTop test" id="userAdmin">
+              <button type="button" class="btn link-dark text-decoration-none" data-bs-toggle="modal"
+                data-bs-target="#modalAdmin">
+                <a class="navbar-brand" href="#">
+                  <span>Administracion</span>
+                </a>
+              </button>
+            </div>
+
+
+
+            <div class="p-2" id="closeSessionNoneJS">
+              <a class="navbar-brand" href="./index.html">
+                <span>Cerrar Sesión</span>
+              </a>
+            </div>
+            <div id="loginStatus"></div>
+          </div>
+        </div>
+
+        <div class="input-group p-2 search__bar d-lg-flex justify-content-center align-items-center d-none">
+          <span class="input-group-text inputLogin2" id="basic-addon1">
+            <i class=" bi bi-search" id="searchbtn"></i>
+            <i class="bi bi-x-square" id="cancelsearchbtn"></i>
+          </span>
+          <input type="search" class="form-control inputLogin " placeholder="Ingrese nombre del juego..."
+            aria-label="Username" aria-describedby="basic-addon1" id="searchbar">
+        </div>
+
+        <button class="navbar-toggler d-block d-lg-none" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+
+
+
+
+
+        <!--OffCanvas Mobile-->
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"
+          alt="NavBar-mobile">
+
+          <!--Header-->
+          <div class="offcanvas-header bg-primary rounded-start-pill bkgDegBlue">
+            <img src="./Assets/logo.png" id="logoNav" alt="logo">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Main</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <!--Body-->
+
+          <div class="offcanvas-body pb-0 px-0 d-flex row">
+            <div class="px-4">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="./index.html">
+                    <i class="bi bi-house"></i>
+                    <span>Pagina Principal</span>
+                  </a>
+                </li>
+                <li class="nav-item border-top">
+                  <a class="nav-link" href="./Pages/About.html">
+                    <i class="bi bi-file-person"></i>
+                    <span>Sobre Nosotros</span>
+                  </a>
+                </li>
+                <li class="nav-item border-top" id="juegosDeseadosModal">
+                  <a class="nav-link" href="./Pages/juegosDeseados.html">
+                    <i class="bi bi-card-list"></i>
+                    <span>Lista Juegos Deseados</span>
+                  </a>
+                </li>
+
+                <li class="nav-item border-top ">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text inputLogin2 mt-2" id="basic-addon1">
+                      <i class=" bi bi-search" id="searchbtn2"></i>
+                      <i class="bi bi-x-square" id="cancelsearchbtn2"></i>
+                    </span>
+                    <input type="search" class="form-control inputLogin mt-2" placeholder="Ingrese nombre del juego..."
+                      aria-label="Username" aria-describedby="basic-addon1" id="searchbar2">
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!--Account-->
+
+            <div class="mt-auto" id="accountNone" alt="cuenta-mobile">
+              <div class="d-flex flex-row w-100  border border-black justify-content-around  accountG">
+                <div class=" m-2">
+                  <i class="bi bi-person"></i>
+                  <button type="button" class="btn link-dark text-decoration-none" data-bs-toggle="modal"
+                    data-bs-target="#loginBtn">
+                    <span>Iniciar sesión</span>
+                  </button>
+                </div>
+                <div class="border-start border-black"></div>
+                <div>
+                  <div class=" m-2">
+                    <i class="bi bi-globe2"></i>
+                    <button id="btnRegisterModal" type="button" class="btn link-dark text-decoration-none"
+                      data-bs-toggle="modal" data-bs-target="#goLogin">
+                      <span>Registrarse</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-auto" id="adminNone">
+              <div class="d-flex flex-row w-100  border border-black justify-content-around  accountG">
+                <div class="m-2 test">
+                  <i class="bi bi-person"></i>
+                  <button type="button" class="btn link-dark text-decoration-none" data-bs-toggle="modal"
+                    data-bs-target="#modalAdmin">
+                    <span>Administracion</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="mt-2" id="modalNoneSession">
+              <div class="d-flex flex-row w-100  border border-black justify-content-around  accountG">
+                <div class="m-2 test">
+                  <i class="bi bi-box-arrow-left"></i>
+                  <button type="button" class="btn link-dark text-decoration-none" data-bs-toggle="modal">
+                    <span>Cerrar Sesion</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+    <!--Modal Login-->
+
+    <div class="modal mt-5 close" id="loginBtn" tabindex="-2" alt="loginModal">
+      <div class="modal-dialog mt-5">
+        <div class="modal-content  loginBtn accountG borderR ">
+          <div class="modal-header bkgDegBlue rounded-start-pill">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Iniciar sesión</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body accountG">
+            <form>
+              <div class="mb-3">
+                <label for="email" class="col-form-label"></label>
+                <input type="email" class="form-control inputLogin" id="emailG" placeholder="Email">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text inputLogin2" id="basic-addon1"">
+                  <i class=" bi bi-eye" id="openEyeG"></i>
+                  <i class="bi bi-eye-slash" id="closeEye"></i>
+                </span>
+                <input type="password" class="form-control inputLogin" placeholder="Password" aria-label="Username"
+                  aria-describedby="basic-addon1" id="password">
+              </div>
+              <div class="d-flex justify-content-center">
+                <button type="button" class="btn link-dark text-decoration-none" data-bs-toggle="modal"
+                  data-bs-target="#rePass">
+                  <a class="navbar-brand" id="hoverLogin">
+                    <span>¿Olvidaste la constraseña?</span>
+                  </a>
+                </button>
+              </div>
+              <div id="mensajeLogin"></div>
+              <div class="modal-footer d-flex justify-content-evenly accountG">
+                <button type="button" class="btn bkgDegBlue textHeader w-25" id="loginButton">Iniciar
+                  sesión</button>
+                <button type="button" class="btn bkgDegBlue textHeader w-25" data-bs-target="#exampleModal"><a
+                    href="./Pages/error404.html">Registrarse</a></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!--modal register-->
+    <div class="modal" id="goLogin" tabindex="-2">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="heading" id="exampleModalLabel">Registrarse</h3>
+            <button type="button" class="btn-close btn-cerrar" id="btn-cerrar1" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="d-flex justify-content-center" id="logo-container">
+            <img class="logo" src="./Assets/logo.png" alt="" width="50px" height="50px">
+          </div>
+          <div class="modal-body">
+            <form id="miFormulario">
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Nombre:</label>
+                <input type="text" class="form-control" id="recipient-name" placeholder="roberto" required>
+              </div>
+              <div class="mb-3">
+                <label for="recipient-apellido" class="col-form-label">Apellido:</label>
+                <input type="text" class="form-control" id="recipient-apellido" placeholder="perez" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="col-form-label">Email</label>
+                <input type="email" class="form-control " id="emailBM" placeholder="examle@gmail.com" required>
+              </div>
+              <div class="mb-3">
+                <div><label for="email" class="col-form-label">contraseña</label></div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text inputLogin2" id="basic-addon2">
+                    <i class="bi bi-eye" id="openEye2"></i>
+                    <i class="bi bi-eye-slash" id="closeEye2"></i>
+                  </span>
+                  <input type="password" class="form-control" id="Password"
+                    placeholder="debe ingresar al menos: una mayuscula, una minuscula, un numero y un simbolo especial"
+                    aria-label="Username" aria-describedby="basic-addon2" id="password" required>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btnRegister" id="btnreg">Registrarse</button>
+                  <button type="button" class="btnRegister btn-cerrar" id="btn-cerrar2"
+                    data-bs-dismiss="modal">cerrar</button>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <div id="botonredirec">
+                    <h8>¿ya tienes cuenta? <button type="button" class="btn link-primary text-decoration-none mb-1"
+                        data-bs-toggle="modal" data-bs-target="#loginBtn">
+                        Inicia Sesion Aquí
+                      </button></h8>
+                  </div>
+                  <div id="mensajeRegistro" style="display: none;">
+                    <h8>¡Registrado exitosamente!</h8>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!--Modal de recucperacion de contraseña-->
+
+    <div class="modal mt-5" id="rePass" tabindex="-2" alt="contraseña">
+      <div class="modal-dialog mt-5">
+        <div class="modal-content  loginBtn accountG borderR ">
+          <div class="modal-header bkgDegBlue rounded-start-pill">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Recuperar Contraseña</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body accountG">
+            <h4>Pasos a seguir para recuperar la contraseña</h4>
+            <ul>
+              <li>1- Presionar enviar en el boton "enviar"</li>
+              <li>2- Recibiras un correo al Email correspondiente de la cuenta, allí deberas presionar en
+                "Recuperar contraseña"</li>
+              <li>3- Automaticamente se te redireccionara a la pagina para Ingresar tu nueva contraseña
+              </li>
+              <li>4- Luego deberas volver a ingresar a tu cuenta con la nueva contraseña</li>
+            </ul>
+          </div>
+          <div class="modal-footer d-flex justify-content-center accountG">
+            <button type="button" class="btn bkgDegBlue textHeader" data-bs-dismiss="modal">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </header>
+  <main class="my-lg-5 my-md-5 my-sm-5">
+   
+      <div class="my-5">
+        <div class="title-product text-center mb-5">
+            <div class="circle circle-red"></div>
+            <h3 class="my-3 fs-1 ">Lista juegos deseados de: <strong id="nombreLD"></strong></h3>
+            <a href="../i" class="fs-5">Ver Mas Juegos <i class="fa-solid fa-caret-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="row justify-content-center" id="contenedor">
+           
+            <!-- <div class="col-md-6 col-lg-3 mb-4"></div> -->
+                <div class="card text-center bg-black py-3 h-100 card-top-red">
+                    <div class="img-container-product">
+                        <div class="icons-container">
+                            <span><i class="fa-solid fa-heart " aria-hidden="true"></i></span>
+                            <span><i class="fa-solid fa-cart-shopping " aria-hidden="true"></i></span>
+                        </div>
+                        <img src="../Assets/jeugoscarousell/acv.jpg" class="card-img-top" alt="Imagen de juego">
+                    </div>
+                    <div class="info-container-product">
+                      <h3 class="card-title text-light">Assasin's Creed Valhalla</h5>
+                        <p class="card-text colorLetras h4 tamañoPalabras">Es el decimosegundo en importancia y el vigesimosegundo
+                          lanzado dentro de la saga de Assassin Creed, y sucesor al juego del 2018 Assassin's Creed
+                          Odyssey.</p>
+                        <div class="mb-md-5 mb-lg-5">
+                          <p class="colorLetras h6">Categoria: Mundo Abierto</p>
+                          <p class="colorLetras h6">Lanzamiento: 10 Nov 2020</p>
+                          <p class="colorLetras mb-lg-5 h6"> <i class="bi bi-microsoft"><i
+                                class="bi bi-apple ms-lg-1"></i></i></p>
+                        </div>
+                        <p class="price fs-3">$7.300 <span>$10.200</span></p>
+                        <div class="mt-2">
+                            <a href="#" class="btn-customized">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+    
   </main>
-  <footer></footer>
+  <footer>
+    <div class="d-flex pre-footer">
+      <p class="p-2 ps-2">Visita nuestros canales</p>
+      <div class="d-flex flex-grow-1 justify-content-center">
+        <i class="bi bi-twitter m-2 text-light fs-4"></i>
+        <i class="bi bi-facebook m-2 text-light fs-4"></i>
+        <i class="bi bi-twitch m-2 text-light fs-4"></i>
+        <i class="bi bi-youtube m-2 text-light fs-4"></i>
+        <i class="bi bi-instagram m-2 text-light fs-4"></i>
+        <i class="bi bi-discord m-2 text-light fs-4"></i>
+      </div>
+    </div>
+    <div class="d-flex flex-column flex-md-row flex-lg-row flex-wrap">
+      <div class="col-12 col-md-12 col-lg-4 d-flex flex-column text-center p-4">
+        <p class="fs-3 text-center text-light">RollingSoft</p>
+        <ul class="linkFooterMG p-3">
+          <li class="linkFooterMG fs-4">Contacto</li>
+          <li class="linkFooterMG fs-4">Privacidad</li>
+          <ul class="linkFooterMG p-2">
+            <li class="linkFooterMG fs-7 ">Condiciones</li>
+            <li class="linkFooterMG fs-7">Publicidad por internet</li>
+            <li class="linkFooterMG fs-7">Configurar Cookies</li>
+          </ul>
+        </ul>
+      </div>
+      <div class="col-12 col-md-12 col-lg-4 d-flex flex-wrap text-center p-4">
+        <div class="col-4 d-flex flex-column text-center fs-4 ">
+          <p>Soporte</p>
+          <p>Rolling Connect</p>
+        </div>
+        <div class="col-4 d-flex flex-column text-center fs-4 ">
+          <p>Empresa</p>
+          <p>Prensa</p>
+          <p>Inversores</p>
+        </div>
+        <div class="col-4 d-flex flex-column text-center fs-4">
+          <p>Ofertas de Trabajo</p>
+          <p>Oficinas</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-12 col-lg-4 text-center d-flex flex-column p-4 align-items-center">
+        <img class="logoFooterMG" src="../Assets/footerimg.png" alt="">
+        <p class="mt-5 fs-6">© 2023 Ubisoft Entertainment. All Rights Reserved. Ubisoft, Ubi.com and the Ubisoft logo
+          are
+          trademarks of
+          Ubisoft Entertainment in the U.S. and/or other countries.</p>
+
+      </div>
+    </div>
+
+  </footer>
+  <script src=" https://cdn.jsdelivr.net/npm/uuid4@2.0.3/browser.min.js "></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.3.0/crypto-js.js"></script>
+  <script src="../Js/login.js" type="module"></script>
+  <script src="../Js/register.js" type="module"></script>
+  <script src="../Js/juegos.js" type="module"></script>
   <script src="../Js/juegosDesados.js"></script>
 </body>
 
