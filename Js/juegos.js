@@ -32,7 +32,7 @@ const renderizarJuegosEnHTML = () => {
     const nuevoElementoJuego = document.createElement('div');
     nuevoElementoJuego.innerHTML = `
 
-      <div class="col-md-6 col-lg-3 mb-4">
+      <div class="card__index">
       <div class="card text-center bg-black py-3 h-100 card-top-red">
           <div class="img-container-product">
               <div class="icons-container">
