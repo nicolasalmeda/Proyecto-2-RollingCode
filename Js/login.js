@@ -194,8 +194,15 @@ closeSessionNone.addEventListener('click',cerrarSesion)
 
 
 
-cargaUsuarios()
-almacenarJuegosEnLocalStorage()
+
 document.addEventListener('DOMContentLoaded', function () {
+    const yaEjecutado = localStorage.getItem('funcionEjecutada');
+    if (!yaEjecutado) {
+        cargaUsuarios()
+        almacenarJuegosEnLocalStorage()
+        localStorage.setItem('funcionEjecutada', true);
+    }else{
+        console.log('Ya se ejecutó la función');
+    }
     verificarUsuarioLog()
 });
