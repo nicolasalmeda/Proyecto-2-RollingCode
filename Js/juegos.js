@@ -113,13 +113,32 @@ const mostrarSearch = () => {
     const idBoton = `verDetalles-${juego.id}`;
     const nuevoElementoJuego = document.createElement('div');
     nuevoElementoJuego.innerHTML = `
-      <div class="card mb-3" style="width: 100%;">
-        <img src="${juego.imagen}" class="card-img-top" alt="${juego.titulo}">
-        <div class="card-body">
-          <h5 class="card-title">${juego.titulo}</h5>
-          <a href="#" id='${idBoton}' class="btn btn-primary">Ver Detalles</a>
+    <div class="card__index">
+    <div class="card text-center bg-black py-3 h-100 card-top-red">
+        <div class="img-container-product">
+            <div class="icons-container">
+                <span><i class="fa-solid fa-heart " aria-hidden="true"></i></span>
+                <span><i class="fa-solid fa-cart-shopping " aria-hidden="true"></i></span>
+            </div>
+            <img src="${juego.imagen}" class="card-img-top" alt="imagen de juego">
         </div>
-      </div>
+        <div class="info-container-product">
+        
+            <h3 class="card-title text-light tituloJuego">${juego.titulo}</h3>
+          <p class="card-text colorLetras h4 tamañoPalabras">${juego.descripcion}</p>
+          <div class="mb-md-5 mb-lg-5">
+            <p class="colorLetras h6">Categoria: ${juego.categoria}</p>
+            <p class="colorLetras h6">Desarrolador: ${juego.desarrollador}</p>
+            <p class="colorLetras mb-lg-5 h6"> <i class="bi bi-microsoft"></i></i></p>
+          </div>
+            <p class="price fs-3">$${juego.precio} <span>$${ (juego.precio-(juego.precio * 0.20)).toFixed(2)  }</span></p>
+            <div class="mt-2">
+           
+                <a href="./Pages/juegoDetail.html" id='${idBoton}' class="btn-customized">Ver Detalles</a>
+            </div>
+        </div>
+    </div>
+</div>
     `;
 
     // Agregar evento click al botón
@@ -130,6 +149,7 @@ const mostrarSearch = () => {
 
     // Agregar el nuevo elemento al contenedor
     contenedor.appendChild(nuevoElementoJuego);
+    contenedor.scrollIntoView({ behavior: 'smooth' });
   });
   searchbtn.style.display = 'none'
   searchbtn2.style.display = 'none'

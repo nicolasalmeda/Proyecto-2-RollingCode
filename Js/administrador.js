@@ -22,6 +22,20 @@ const traerJuegos = () => {
   return juegos;
 }
 
+function accesoAdmin() {
+  const usuario = JSON.parse(localStorage.getItem('logginUser'));
+  if (usuario && usuario._admin) {
+    return console.log('Permiso autorizado');
+  } else {
+    return (
+      setTimeout(() => {
+      window.location.href = '../index.html',
+      console.log('Permiso denegado')
+      },1000)
+    )
+  }
+}
+
 const ModalEditarJuego = (id) => {
   
   abrirModal(); 
@@ -209,5 +223,7 @@ btnCloseModal.addEventListener('click', cerrarModal);
 btnSubmitForm.addEventListener('click', editarCrearJuego);
 
 document.addEventListener('DOMContentLoaded', function () {
+  accesoAdmin();
   cargarJuegosAdmin();
+  
 });
