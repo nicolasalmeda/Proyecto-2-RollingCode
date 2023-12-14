@@ -615,3 +615,21 @@ p
 {
   color: white;
 }
+.divisionHR {
+  padding-top: 2px;
+}
+/*------------------------------- reseña ------------------------------------*/
+
+.enviar-consulta-btn {
+  background-color: #68A5A6
+}
+
+.enviar-consulta-btn:hover {
+  background-color: #000000;
+}
+
+.rolling-point-map {
+  width: 100%;
+  height: 500px;
+  border: 0;
+}

@@ -21,29 +21,74 @@ const cargarDetailJuego = () => {
 
   // Agregar nuevo contenido al contenedor
   contenedor.innerHTML = `
-    <div class="d-flex flex-column">
-      <img src="${juego.imagen}" class="card-img-top" alt="${juego.titulo}">
-      <img src="${juego.gif}" class="card-img-top" alt="${juego.titulo}">
-      <h2>${juego.titulo}</h2>
-      <p>${juego.descripcion}</p>
-      <p>Precio: ${juego.precio}</p>
-      <p>Requisitos del sistema: ${juego.requisitosDelSistema}</p>
-      <p>Desarrollador: ${juego.desarrollador}</p>
-    </div>
+  <section class="my-5 ">
+  <div class="row ">
+      <div class="col-md-12 col-lg-6 mb-5 border-end">
+         <h2 class="text-center degrade fs-1">${juego.titulo}</h2>
+         <h3 class="mt-4 text-center">Descripcion</h3>
+         <p class="fs-4 text-md-center text-sm-center">
+         ${juego.descripcion}
+         </p>
+         <h3 class="text-center">Precio</h3>
+         <p class="price fs-3 text-center text-white">${juego.precio} <span>$${ (juego.precio-(juego.precio * 0.20)).toFixed(2)  }</span></p>
+         <h3 class="text-center mt-3">Categoria</h3>
+         <p class="fs-3 text-center h6 colorLetras text-white">${juego.categoria}</p>
+         <h3 class="text-center mt-3">Desarrollador</h3>
+         <p class="fs-3 text-center h6 colorLetras text-white">${juego.desarrollador}</p>
+         <p class="colorLetras mb-lg-5 h2 text-center"> <i class="bi bi-microsoft"></i></i></p>
+        
+         
+      </div>
+      <div class="col-md-12 col-lg-6   contenedor-superposicion ">
+
+       <section class="container">
+         <article class="row  rounded degradebotones pb-4 ">
+           <div class="col-12">
+             <img src="${juego.imagen}" class="img-fluid-custom w-100 h-75  mt-4" alt="Imagen del juego">
+           </div>
+           <div class="col-12">
+             <img src="${juego.gif}" class="img-fluid-custom w-100 h-75 " alt="Imagen del juego">
+           </div>
+           
+         </article>
+       </section>
+         
+         
+      </div>
+  </div>
+  </section>
   `;
 
   // Iterar sobre las reseñas y agregarlas al contenedor de reseñas
+  resenas.innerHTML = ''
   juego.reseñas.forEach(e => {
-    resenas.innerHTML += `
-      <p>Nombre: ${e.nombre}</p>
-      <p>${e.resena}</p>
+    resenas.innerHTML += ` <div class="card text-light colorGris my-4 text-roboto p-2">
+    <div class="card-header">
+      <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i>
+    </div>
+    <div class="card-body text-center">
+      <div class="card-text">
+        ${e.resena}
+      </div>
+    </div>
+    <div class="card-footer">
+      <i class="bi bi-hand-thumbs-up-fill h2 text-success bg-light"></i> <i class="bi bi-hand-thumbs-down-fill h2 text-danger bg-light"></i>
+     <p class="text-end text-dark  h6 colorLetras">Escrito por: ${e.nombre}</p>
+    </div>
+  </div>
     `;
   });
 };
 
 const enviarResena = (e) => {
   e.preventDefault();
+  const userLog = JSON.parse(localStorage.getItem('logginUser'));
+  
 
+  if (!userLog || !userLog._correo) {
+    return alert('Debe iniciar sesión para dejar una reseña');
+  }
+  
   const juegoJson = JSON.parse(localStorage.getItem('juegoDetail')) || {};
 
   // Verificar si hay juego en el localStorage
@@ -52,12 +97,7 @@ const enviarResena = (e) => {
     return;
   }
 
-  const userLog = JSON.parse(localStorage.getItem('logginUser'));
-  console.log(userLog._correo);
-
-  if (!userLog || !userLog._correo) {
-    return alert('Debe iniciar sesión para dejar una reseña');
-  }
+  
 
   // Obtener valores del formulario
   const nombre = userLog._correo;
@@ -90,15 +130,14 @@ const enviarResena = (e) => {
   const index = juegos.findIndex(juego => juego.id === juegoJson.id);
 
   if (index !== -1) {
-    juegos[index] = juegoJson;
+    // Actualizar solo las reseñas del juego específico
+    juegos[index].reseñas = juegoJson.reseñas;
+    localStorage.setItem('juegos', JSON.stringify(juegos));
   } else {
     console.error('No se encontró el juego en el array de juegos.');
     return;
   }
-
-  // Actualiza el array de objetos en el localStorage
-  localStorage.setItem('juegos', JSON.stringify(juegos));
-
+ alert("Reseña añadida exitosamente")
   // Limpiar el formulario
   document.getElementById('resenia').value = '';
   cargarDetailJuego();
