@@ -50,7 +50,7 @@ const renderizarJuegosEnHTML = () => {
               <p class="colorLetras h6">Desarrolador: ${juego.desarrollador}</p>
               <p class="colorLetras mb-lg-5 h6"> <i class="bi bi-microsoft"></i></i></p>
             </div>
-              <p class="price fs-3">$${juego.precio} <span>$${ (juego.precio-(juego.precio * 0.20)).toFixed(2)  }</span></p>
+              <p class="price fs-3">$${juego.precio} <span>$${ (juego.precio + (juego.precio * 0.20)).toFixed(2)  }</span></p>
               <div class="mt-2">
              
                   <a href="./Pages/juegoDetail.html" id='${idBoton}' class="btn-customized">Ver Detalles</a>
@@ -131,7 +131,7 @@ const mostrarSearch = () => {
             <p class="colorLetras h6">Desarrolador: ${juego.desarrollador}</p>
             <p class="colorLetras mb-lg-5 h6"> <i class="bi bi-microsoft"></i></i></p>
           </div>
-            <p class="price fs-3">$${juego.precio} <span>$${ (juego.precio-(juego.precio * 0.20)).toFixed(2)  }</span></p>
+            <p class="price fs-3">$${juego.precio} <span>$${ (juego.precio + (juego.precio * 0.20)).toFixed(2)  }</span></p>
             <div class="mt-2">
            
                 <a href="./Pages/juegoDetail.html" id='${idBoton}' class="btn-customized">Ver Detalles</a>

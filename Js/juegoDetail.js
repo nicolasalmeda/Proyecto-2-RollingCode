@@ -30,7 +30,7 @@ const cargarDetailJuego = () => {
          ${juego.descripcion}
          </p>
          <h3 class="text-center">Precio</h3>
-         <p class="price fs-3 text-center text-white">${juego.precio} <span>$${ (juego.precio-(juego.precio * 0.20)).toFixed(2)  }</span></p>
+         <p class="price fs-3 text-center text-white">${juego.precio} <span>$${ (juego.precio + (juego.precio * 0.20)).toFixed(2)  }</span></p>
          <h3 class="text-center mt-3">Categoria</h3>
          <p class="fs-3 text-center h6 colorLetras text-white">${juego.categoria}</p>
          <h3 class="text-center mt-3">Desarrollador</h3>
