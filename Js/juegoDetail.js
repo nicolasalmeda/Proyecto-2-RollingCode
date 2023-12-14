@@ -162,6 +162,10 @@ const agregarDeseados = () => {
     userLog._lista = [];
   }
 
+  if (userLog._lista.find(juego => juego.id === juegoJson.id)) {
+    return alert('El juego ya se encuentra en su lista de deseados');
+  }
+
   userLog._lista.push(juegoJson);
 
   // Actualiza el objeto de usuario en el localStorage
