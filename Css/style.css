@@ -1,0 +1,635 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Oswald:wght@500&family=Roboto:wght@100&display=swap');
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Roboto', sans-serif; */
+:root {
+
+  --color-1: #B9B1A9;
+  --color-2: #41487D;
+  --color-3: #201D2C;
+  --color-4: #4F5DAA;
+  --color-5: #68A5A6;
+
+  --color-1: #B9B1A9;
+  --color-1-fuerte: #a39ba2;
+  --color-1-fuerte-2: #8d8786;
+
+  --color-2: #41487D;
+  --color-2-oscuro-fuerte: #393e6a;
+  --color-2-oscuro-fuerte-2: #313457;
+
+  --color-3: #201D2C;
+  --color-3-fuerte: #1a1925;
+  --color-3-fuerte-2: #15141c;
+
+  --color-4: #4F5DAA;
+  --color-4-fuerte: #485696;
+  --color-4-fuerte-2: #414d82;
+
+  --color-5: #68A5A6;
+  --color-5-fuerte: #639da3;
+  --color-5-fuerte-2: #589590;
+
+  }
+
+*{
+  color: #68A5A6;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+ /* Boton */
+ .btnCard{
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var( --color-5);
+  --bs-btn-border-color: var( --color-5);
+ 
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg:var(--color-5-fuerte );
+  --bs-btn-hover-border-color: var(--color-5-fuerte);
+
+  --bs-btn-active-color:var(--bs-white) ;
+  --bs-btn-active-bg:  var(--color-5-fuerte-2);
+  --bs-btn-active-border-color:var(--color-5-fuerte-2);
+}
+
+
+
+
+
+/*-------------------NavBar-------------------*/
+#offcanvasNavbar{
+  transition: 0.30s;
+  background: rgb(21,20,28);
+  background: linear-gradient(90deg, rgba(21,20,28,1) 0%, rgba(21,20,28,0.7798594847775175) 53%, rgba(21,20,28,0.5035128805620609) 100%);
+}
+
+
+#navbar{
+  background-color:#201D2C;
+}
+
+.loginBtn{
+  -webkit-box-shadow: -1px 13px 23px -5px rgba(79, 93, 170, 1);
+-moz-box-shadow: -1px 13px 23px -5px rgba(79, 93, 170, 1);
+box-shadow: -1px 13px 23px -5px rgba(79, 93, 170, 1);
+  
+}
+.borderR{
+  border-radius: 30px 0px 0px 0px;
+}
+.accountG{
+  background-color: #15141c;
+}
+
+.pTop{
+  padding-top: 2px;
+}
+
+
+
+.hoverLogin {
+  text-decoration-line: none;
+}
+.hoverLogin:hover{
+  text-decoration: underline;
+}
+
+.inputLogin{
+  background-color:#313457;
+  color: #68A5A6;
+}
+.inputLogin2{
+  background-color:#201D2C;
+}
+
+.inputLogin:focus {
+  background-color: #201D2C;
+  color: #68A5A6;
+}
+
+.inputLogin::placeholder {
+  color: #68A5A6;
+}
+
+.textHeader{
+  color: #68A5A6;
+}
+
+/*Transcition*/
+.modal-dialog {
+  transform: translateX(100%);
+  transition: transform 0.7s;
+}
+
+.modal.show .modal-dialog {
+  transform: translateX(0);
+}
+
+/*//Transcition*/
+
+
+
+.dropdown-menu{
+  background:#393e6a
+}
+
+@media (max-width: 750px){
+  #logoNav{
+      width: 10vw;
+  }
+}
+@media (min-width: 750px){
+  #logoNav{
+      width: 5vw;
+  }
+}
+
+body{
+  background: -webkit-linear-gradient(#15141c, #2e2c42,#201D2C,#313457,#393e6a);
+}
+
+
+
+
+.bkgDegBlue{
+  background: rgb(57,62,106);
+  background: linear-gradient(90deg, rgba(57,62,106,1) 0%, rgba(57,62,106,0.730679156908665) 53%, rgba(57,62,106,0.522248243559719) 100%);
+}
+
+.navbar-toggler{
+  background-color:#4F5DAA;
+}
+
+.nav-item i{
+  font-size: 30px;
+}
+
+/*------------Seccion 1 ------------*/
+
+main{
+padding: 50px;  
+}
+
+.padding {
+  padding: 150px;
+}
+
+
+.marginCarrusel {
+ margin-bottom: 450px;
+}
+
+
+.dimensionImagen {
+  width: 20px;
+  height: 20px;
+}
+
+.marginBoton {
+position:static;
+width: 50%;
+margin-top: 5px;
+}
+.carrusel {
+display: flex;
+flex-wrap: nowrap;
+overflow: scroll;
+}
+
+.elemento {
+flex: 1 0 auto;
+margin-left: 20px;
+width: 200px;
+height: 300px;
+}
+
+/* Colores aplicados */
+.colorFondo {
+background-color: #1a1925;
+
+}
+
+.colorCard {
+background-color: #41487D;
+height: 100%;
+}
+
+.colorMobile {
+background-color: #41487D ;
+}
+
+.colorLetras {
+color: #68A5A6;
+}
+
+
+/* media querys */
+
+@media (min-width: 280px) {
+  .carruselPadding {
+    padding:150px
+  }
+  .tamañoLetra {
+    font-size: 16px;
+  }
+}
+
+
+@media (min-width: 540px) {
+  .carruselPadding {
+      padding:50px
+  }
+  .elemento {
+      flex: 1 0 auto;
+      margin-left: 10px;
+      width: 200px;
+      height: 500px;
+  } 
+}
+
+@media (min-width: 768px) {
+  .marginFlechas {
+    margin-top: 380px;
+  }
+  .marginBoton {
+    margin-top:-70px;
+  }
+  .marginIndicador {
+    margin-top: 500px;
+  }
+  #carousel-inner{
+    height: 750px;
+    }
+      
+  .card-body {
+      height: 300px;
+    }
+
+}
+
+
+
+@media (min-width: 820px){
+  .marginVermas {
+    margin-bottom: 10px;
+  }
+  .card-body {
+     height: 300px;
+  }
+  .marginIndicador {
+      margin-bottom: -20px;
+  }
+}
+
+
+@media (min-width: 912px) {
+  .carruselPadding {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+  .marginAbajo {
+      margin-bottom: 100px;
+   }
+  .marginFlechas {
+    margin-bottom: 800px;
+  }
+  .marginIndicador {
+     margin-bottom: 120px;
+  }
+  .tamañoPalabras {
+     font-size: 20px;
+  }
+  .card-body {
+    height: 700px;
+  }
+  #carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+      
+  #carousel-inner{
+    height: 580px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+
+  .carruselPadding {
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+  #carousel-inner img {
+    width: 1000px;
+    height: 100%;
+  }
+      
+  #carousel-inner{
+    height: 480px;
+  }
+  .marginBoton {
+    width: 50%;
+   }
+   
+  .card-body {
+    height: 100%;
+  }
+  .tituloJuego {
+    font-size: 23px;
+  }
+   .marginIndicador {
+    margin-bottom: 70px;
+  }
+}
+
+@media (min-width: 1500px) {
+.marginBoton {
+  width: 50%;
+}
+}
+
+
+
+
+
+
+/* -----------------SECTION2------------------- */
+
+
+#container-main h1{
+  color: #68A5A6;
+}
+h2{
+color: #68A5A6;
+}
+
+@keyframes imagenAgrandada {
+  from{
+      transform: scale(1);
+  }
+  to{
+      transform: scale(1.25);
+  }
+}
+
+
+.carouselCategories div div .img:hover{
+  animation-name:imagenAgrandada;
+  animation-duration:0.3s;
+  animation-delay: 0.35s;
+  animation-fill-mode: both;
+}
+
+.carousel-container{
+  overflow:hidden;
+}
+@keyframes carouselOverflow {
+  from{
+      overflow: hidden;
+  }
+  to{
+      overflow: visible;
+  }
+  
+}
+.carousel-container:hover{
+  animation-name: carouselOverflow;
+  animation-play-state:running;
+  animation-delay: 0.3990s;
+  animation-fill-mode: both;
+}
+
+
+.boton-izq{
+  margin-left:-80px;
+  width: 100px;
+}
+.boton-der{
+  margin-right: -80px;
+  width: 100px;
+}
+
+@media (max-width: 920px){
+.carouselCategories div div .img{
+  width: 200px;
+  height: 120px;
+}
+.boton-der{
+  transform: scale(0.5);
+}
+.boton-izq{
+  transform: scale(0.5);
+}
+  
+}
+@media (max-width: 769px){
+.carouselCategories div div .img{
+  height: 70px;
+}
+
+.carouselGamePadding{
+  padding-top: 5px;
+}
+}
+
+
+
+/* Boton customizado */
+.btn-customized{
+  color: #fff;
+  background: var(--color-5-fuerte-2);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: 600;
+  transition: filter .3s, letter-spacing .3s;
+  cursor: pointer;
+}
+.btn-customized:hover{
+  filter: brightness(1.2);
+  letter-spacing: 3px;
+}
+
+
+
+
+
+
+
+.title-product a{
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  color: #ccc;
+}
+.title-product a:hover{
+  color: var(--gold-color);
+}
+
+.title-product h3{
+ font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  color: #eee;
+  font-weight: 500;
+}
+
+/* Customizando el precio de los productos  */
+.price{
+  font-weight: 600;
+  color: var(--gold-color);
+}
+.price span{
+  font-weight: 400;
+  color: #999;
+  font-size: 17px;
+  text-decoration: line-through;  /* Coloca el precio tachado */
+}
+
+/* Efecto de zoom al pasar el mouse sobre los productos  */
+.img-container-product{
+  overflow: hidden;
+  padding: 13px 0;
+}
+.img-container-product img{
+  transition: transform .6s;
+}
+.img-container-product img:hover{
+  transform: scale(1.3);
+}
+
+/* Customizando los iconos que aparecen en los productos  */
+.img-container-product .icons-container{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  gap: 7px;
+}
+.img-container-product .icons-container span{
+  font-size: 34px;
+  color: #fff !important;
+  z-index: 1;
+  transition: color .3s;
+  
+}
+
+.img-container-product .icons-container span:hover{
+  cursor: pointer;
+  color: darkorange !important;
+
+}
+.fa-solid
+{
+  font-size: 34px;
+  color: #fff !important;
+  z-index: 1;
+  transition: color .3s;
+}
+.fa-solid:hover{
+  cursor: pointer;
+  color: darkorange !important;
+}
+
+
+.info-container-product{
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 7px;
+}
+.img{
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.9));
+  height: 100%;
+  width: 100%;
+  
+    
+}
+.contenedor-superposicion
+{
+  position: relative;
+}
+.contenedor-superposicion h2 
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.title-product {
+  font-family: 'Oswald', sans-serif;;
+  text-transform: uppercase;
+  color: #eee;
+  font-weight: 500;
+}
+.degrade
+{
+  background: -webkit-linear-gradient( #b7e3df, #03685b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Oswald', sans-serif;
+  
+}
+h1 h2 h3 
+{
+  font-family: 'Oswald', sans-serif;
+}
+p
+{
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+.colorboton
+{
+  background-color: black;
+}
+
+
+/* Efecto de zoom al pasar el mouse sobre los botonoes  */
+.container-boton-zoom{
+  overflow: hidden;
+  padding: 13px 0;
+}
+.container-boton-zoom button{
+  transition: transform .6s;
+}
+.container-boton-zoom  button:hover{
+  transform: translate(0%,-7%);
+}
+
+.degradebotones
+{
+  background: linear-gradient(70deg, #15141c, #1a1925,#201D2C,#313457,#313457,#393e6a,#393e6a,#41487D);
+}
+
+.a 
+{
+  text-decoration: none;
+  color: #68A5A6;
+}
+.a:hover
+{
+  color: white;
+}
+.divisionHR {
+  padding-top: 2px;
+}
+/*------------------------------- reseña ------------------------------------*/
+
+.enviar-consulta-btn {
+  background-color: #68A5A6
+}
+
+.enviar-consulta-btn:hover {
+  background-color: #000000;
+}
+
+.rolling-point-map {
+  width: 100%;
+  height: 500px;
+  border: 0;
+}
